@@ -1,0 +1,135 @@
+body {
+  /* overflow-y: hidden; */
+  background-color: #332e2e;
+}
+
+.dashboard-body {
+  position: relative;
+  margin-top: -30px;
+  background-color: #e7dada;
+  height: 697px;
+  padding-top: 20px;
+  font-family: 'Sofia', cursive;
+  margin-left: 299px;
+  width: 1000px;
+}
+
+.input {
+  margin: 5px 0px 10px 20px;
+  width: 370px;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidebar-wrapper {
+  top: 0px;
+  z-index: 1000;
+  position: fixed;
+  width: 0px;
+  height: 100%;
+  overflow-y: auto;
+  background: #191b1d;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 300px;
+}
+
+.sidebar-nav {
+  position: relative;
+  top: 0;
+  width: 300px;
+  margin: 0px;
+  padding: 20px 0px 0px 0px;
+  list-style: none;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 22 px;
+}
+
+.sidebar-contents {
+  margin-top: 20px;
+  list-style: none;
+  text-indent: 40px;
+}
+
+.sidebar-nav li {
+  font-family: 'Sofia', cursive;
+  font-size: 20px;
+  /* text-align: center; */
+  line-height: 50px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999;
+  padding: 5px 0px 5px 0px;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  /* text-align: 'center'; */
+
+  height: 70px;
+  font-size: 26px;
+  line-height: 50px;
+  border-bottom: 3px solid #435160;
+}
+
+.sidebar-nav > .sidebar-brand a {
+  text-align: center;
+
+  font-size: 35px;
+  color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+.dashboard-contents {
+  height: 570px;
+  width: 500px;
+  position: relative;
+  left: 3%;
+  margin-top: 50px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 2px #b9acac;
+  font-size: x-small;
+  text-align: center;
+}

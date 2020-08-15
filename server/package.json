@@ -1,0 +1,33 @@
+{
+  "name": "reactchatbot",
+  "version": "1.0.0",
+  "description": "react bot ",
+  "main": "index.js",
+  "engines": {
+    "node": "13.12.0",
+    "npm": "6.14.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Chirag Jain",
+  "license": "ISC",
+  "dependencies": {
+    "actions-on-google": "^2.12.0",
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dialogflow": "^1.2.0",
+    "dialogflow-fulfillment": "^0.6.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.9",
+    "nodemailer": "^6.4.6",
+    "nodemon": "^2.0.3",
+    "structjson": "^1.0.1"
+  },
+  "devDependencies": {}
+}
