@@ -17,6 +17,7 @@ export class Home extends Component {
   }
 
   componentDidMount() {
+   
     const id = decode(localStorage.getItem('token'))._id;
     const url = 'http://localhost:5000/userRegistration/';
     axios.get(`${url}${id}`).then((response) => {

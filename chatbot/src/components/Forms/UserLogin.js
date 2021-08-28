@@ -24,6 +24,7 @@ class UserLogin extends Component {
     axios
       .post('http://localhost:5000/userRegistration/login', formData)
       .then((response) => {
+        console.log("RR",response)
         if (response.data.errors) {
           this.setState(() => ({
             errors: response.data.errors,
@@ -32,11 +33,11 @@ class UserLogin extends Component {
         } else {
           // write this to localStorage
           //   const tokenData = decode(response.data.token);
+          console.log(response.data)
           localStorage.setItem('token', response.data.token);
           // redirect to home page
 
           this.props.history.push('/home');
-          window.location.reload();
         }
       });
   };

@@ -59,8 +59,9 @@ userSchema.pre('save', function (next) {
 });
 
 // own instance methods
-userSchema.methods.generateToken = function () {
-  const user = this;
+userSchema.methods.generateToken = () => {
+  let user = this;
+  console.log('User',user)
   const tokenData = {
     _id: user._id,
     email: user.email,
@@ -68,19 +69,19 @@ userSchema.methods.generateToken = function () {
   };
 
   const token = jwt.sign(tokenData, 'jwt@123');
-  user.tokens.push({
-    token,
-  });
+  console.log(token)
+  // user.tokens.push({
+  //   token,
+  // });
   return user
-    .save()
-    .then(function (user) {
-      console.log(user);
-      return Promise.resolve(token);
-    })
-    .catch(function (err) {
-      console.log(err);
-      return Promise.reject(err);
-    });
+  //   .save()
+  //   .then(function (user) {
+  //     return Promise.resolve(token);
+  //   })
+  //   .catch(function (err) {
+  //     console.log(err);
+  //     return Promise.reject(err);
+  //   });
 };
 
 // own static method

@@ -1,61 +1,61 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      home: 'nav-link',
-      profile: 'nav-link',
-      orders: 'nav-link',
-      changepassword: 'nav-link',
-      menu: 'nav-link',
+      home: "nav-link",
+      profile: "nav-link",
+      orders: "nav-link",
+      changepassword: "nav-link",
+      menu: "nav-link",
     };
   }
 
   activeHome = () => {
     this.setState({
-      home: 'nav-link active',
-      profile: 'nav-link',
-      orders: 'nav-link',
-      changepassword: 'nav-link',
-      menu: 'nav-link',
+      home: "nav-link active",
+      profile: "nav-link",
+      orders: "nav-link",
+      changepassword: "nav-link",
+      menu: "nav-link",
     });
   };
   activeProfile = () => {
     this.setState({
-      home: 'nav-link ',
-      profile: 'nav-link active',
-      orders: 'nav-link',
-      changepassword: 'nav-link',
-      menu: 'nav-link',
+      home: "nav-link ",
+      profile: "nav-link active",
+      orders: "nav-link",
+      changepassword: "nav-link",
+      menu: "nav-link",
     });
   };
   activeOrders = () => {
     this.setState({
-      orders: 'nav-link active',
-      home: 'nav-link ',
-      profile: 'nav-link',
-      changepassword: 'nav-link',
-      menu: 'nav-link',
+      orders: "nav-link active",
+      home: "nav-link ",
+      profile: "nav-link",
+      changepassword: "nav-link",
+      menu: "nav-link",
     });
   };
   activeChangePassword = () => {
     this.setState({
-      home: 'nav-link ',
-      profile: 'nav-link',
-      orders: 'nav-link',
-      changepassword: 'nav-link active',
-      menu: 'nav-link',
+      home: "nav-link ",
+      profile: "nav-link",
+      orders: "nav-link",
+      changepassword: "nav-link active",
+      menu: "nav-link",
     });
   };
   activeMenu = () => {
     this.setState({
-      home: 'nav-link ',
-      profile: 'nav-link',
-      orders: 'nav-link',
-      changepassword: 'nav-link',
-      menu: 'nav-link active',
+      home: "nav-link ",
+      profile: "nav-link",
+      orders: "nav-link",
+      changepassword: "nav-link",
+      menu: "nav-link active",
     });
   };
 
@@ -66,7 +66,7 @@ class Header extends Component {
           <ul className="nav nav-tabs">
             <li className="nav-item">
               <Link
-                style={{ color: 'darkblue' }}
+                style={{ color: "darkblue" }}
                 className={this.state.home}
                 to="/home"
                 onClick={this.activeHome}
@@ -77,7 +77,7 @@ class Header extends Component {
             </li>
             <li className="nav-item">
               <Link
-                style={{ color: 'darkblue' }}
+                style={{ color: "darkblue" }}
                 className={this.state.profile}
                 to="/profile"
                 onClick={this.activeProfile}
@@ -88,7 +88,7 @@ class Header extends Component {
             </li>
             <li className="nav-item">
               <Link
-                style={{ color: 'darkblue' }}
+                style={{ color: "darkblue" }}
                 className={this.state.orders}
                 to="/orders"
                 onClick={this.activeOrders}
@@ -99,7 +99,7 @@ class Header extends Component {
             </li>
             <li className="nav-item">
               <Link
-                style={{ color: 'darkblue' }}
+                style={{ color: "darkblue" }}
                 className={this.state.changepassword}
                 to="/changepassword"
                 onClick={this.activeChangePassword}
@@ -110,7 +110,7 @@ class Header extends Component {
             </li>
             <li className="nav-item">
               <Link
-                style={{ color: 'darkblue' }}
+                style={{ color: "darkblue" }}
                 className={this.state.menu}
                 to="/menu"
                 onClick={this.activeMenu}
@@ -119,10 +119,15 @@ class Header extends Component {
                 Menu
               </Link>
             </li>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <li className="nav-item">
-              <Link className="nav-link" to="/logout">
+              <Link
+                className="nav-link"
+                // onClick={
+                //   (() => localStorage.removeItem("token"),
+                //   this.props.history.push("/login"))
+                // }
+                to="/login"
+              >
                 Logout
               </Link>
             </li>

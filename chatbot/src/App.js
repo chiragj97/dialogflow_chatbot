@@ -58,7 +58,7 @@ export default class App extends Component {
                       )
                       .then((response) => {
                         localStorage.removeItem('token');
-                        props.history.push('/login');
+                        this.props.history.push('/login');
                         window.location.reload();
                       });
                   }}
